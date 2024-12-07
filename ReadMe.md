@@ -4,6 +4,14 @@
 - **Python:**  3.12.5 [Used by me while pushing the code]
 
 ## Steps to Run the Project
+### Create Virtual Env
+- ```
+  python -m venv env
+  ```
+- ```
+  pip install -r requirements.txt
+  ```
+
 ### Run the following to directly run the web app
 1. Run the following:
     ```
