@@ -20,6 +20,22 @@ The system processes raw audio files, extracts meaningful acoustic features, and
 
 - 📓 Jupyter Notebook Integration: Includes complete, transparent workflows for model training (svm_model.ipynb) and evaluation (Predict.ipynb).
 
+## 🤖 Models & Techniques
+
+The system employs robust machine learning algorithms to classify audio signals based on extracted acoustic features.
+
+##### 1. Audio Feature Extraction
+
+Raw bird vocalizations are complex time-series data. Using the file_preparator.py script, the raw audio files in the /songs directory are processed to extract key machine-readable acoustic features. These features (often including MFCCs, Spectral Centroids, and Zero-Crossing Rates) quantify the texture, pitch, and spectral shape of the bird calls. The extracted tabular data is then saved into train.csv and test.csv.
+
+##### 2. Support Vector Machine (SVM)
+
+The primary predictive model used is a Support Vector Machine (svm.sav). SVMs are highly effective for audio classification tasks because they perform exceptionally well in high-dimensional feature spaces. The model maps the acoustic features and finds the optimal hyperplane that clearly separates the distinct bird species classes.
+
+##### 3. Naive Bayes
+
+A Naive Bayes classifier (naive.sav) is also included in the pipeline. This probabilistic model serves as a strong baseline, offering incredibly fast training and inference times by assuming conditional independence between the extracted acoustic audio features.
+
 ## ⚙️ How It Works
 
 Here is a visual representation of the project's data flow, from raw audio to final web prediction:
